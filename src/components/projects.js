@@ -1,9 +1,10 @@
 
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import PropTypes, { node } from "prop-types"
 import React from "react"
 import styled from "styled-components"
 
+import Project from "./project"
 import media from '../styles/media'
 
 
@@ -15,38 +16,50 @@ padding: 5em 1.0875rem 1em;
 display: flex;
 min-height: 100vh;
 flex-direction: column;
-justify-content: space-between;
+justify-content: flex-start;
 align-items: center;
   
 `
 
 const ProjectsGrid = styled.div`
 
-display: grid;
-grid-template-columns: repeat(auto-fill, 178px);
-grid-gap: 10px;
-justify-content: center;
-
+  display: grid; /* 1 */
+  grid-template-columns: repeat(auto-fill, 178px); /* 2 */
+  grid-gap: 10px; /* 3 */
+  justify-content: center; /* 4 */
 
 `
 
 
 class Projects extends React.Component{
 
+  static propTypes = {
+    data: PropTypes.array.isRequired,
+  };
+
   render(){
 
+    let projects = []
+    let flag = 0
+    
+    projects = this.props.data.map( project =>   
+        
+      <Project key = { project.node.frontmatter.id } frontmatter = {project.node.frontmatter} />
+
+    )
+    
     return(
       
       <ProjectsWrapper>
 
         <div> Projects </div>
 
+        
         <ProjectsGrid>
 
-
+          { projects }
 
         </ProjectsGrid>
-
 
       </ProjectsWrapper>
 
@@ -59,6 +72,10 @@ class Projects extends React.Component{
 
 
 }
+
+
+
+export default Projects
 
 
 

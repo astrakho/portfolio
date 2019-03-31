@@ -4,7 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+
+
 import About from "../components/about"
+
+
+import Projects from "../components/projects"
 
 
 const IndexPage = ( { data } ) => (
@@ -13,14 +18,15 @@ const IndexPage = ( { data } ) => (
     
     <About data = { data.about.edges }/>
 
+    <Projects data = { data.projects.edges }/>
+
   </Layout>
 )
 
 export default IndexPage
 
-
 export const query = graphql`
-query{
+query IndexQuery{
 
   about: allMarkdownRemark {
     edges {
@@ -32,6 +38,25 @@ query{
       }
     }
   }
-}
 
+  projects: allMarkdownRemark (
+    filter: { fileAbsolutePath: { regex: "/projects/" } }
+    sort: { fields: [frontmatter___id], order: ASC }
+    ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          id
+          github
+          link
+          description
+        }
+      }
+    }
+  }
+
+
+
+}
 `
