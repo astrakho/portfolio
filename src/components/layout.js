@@ -44,6 +44,7 @@ const Layout = ({ children }) => (
         <LayoutWrapper>
 
           <main>{children}</main>
+          
           <footer style = {{ textAlign: 'center', marginBottom: '1.45em' }}>
             © Built with
             { ` ` }

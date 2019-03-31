@@ -9,7 +9,7 @@ const AboutContainer = styled.div`
 
 const ContentContainer = styled.div`
   width: 80%;
-  max-width: 500px;
+  max-width: 550px;
 `;
 
 const Greeting = styled.h2`
