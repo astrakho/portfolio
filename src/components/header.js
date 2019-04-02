@@ -12,8 +12,6 @@ import media from '../styles/media'
 const HeaderContainer = styled.header`
   background: #ECECEC;
   padding: 0px 90px;
-  margin-bottom: 1.45rem;
-
 
   ${media.desktop`padding: 0 40px;`};
   ${media.tablet`padding: 0 25px;`};

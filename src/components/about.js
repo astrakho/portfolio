@@ -3,8 +3,10 @@ import styled from 'styled-components';
 
 const AboutContainer = styled.div`
   display: flex;
+  max-width: 550px;
   justify-content: center;
-  align-items: center;
+  align-items: start;
+  min-height: 70vh;
 `;
 
 const ContentContainer = styled.div`

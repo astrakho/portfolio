@@ -14,17 +14,27 @@ const LayoutWrapper = styled.div`
   margin: 0 auto;
   maxWidth: 960;
   padding: 5em 1.0875rem 1em;
-
-
-
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
-
   align-items: center;
 
 `
+
+const Main = styled.main`
+
+  margin: 0 auto;
+  width: 100%;
+  padding: 5em 1.0875rem 1em;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+`
+
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -43,7 +53,7 @@ const Layout = ({ children }) => (
 
         <LayoutWrapper>
 
-          <main>{children}</main>
+          <Main> {children} </Main>
           
           <footer style = {{ textAlign: 'center', marginBottom: '1.45em' }}>
             © Built with
