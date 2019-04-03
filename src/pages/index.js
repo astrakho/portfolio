@@ -5,15 +5,20 @@ import SEO from "../components/seo"
 
 import About from "../components/about"
 import Projects from "../components/projects"
+import Skills from "../components/skills"
 
 
 
 
 const IndexPage = ( { data } ) => (
+
   <Layout>
-    <SEO title="Home" keywords={[`alexander strakhov`, `software`, `engineer`, `developer`, `react`]} />
+
+    <SEO title="Home" keywords={[`alexander strakhov`, `software`, `engineer`, `developer`, `portfolio`]} />
     
     <About data = { data.about.edges }/>
+
+    <Skills data = { data.skills.edges } />
 
     <Projects data = { data.projects.edges }/>
 
@@ -61,6 +66,21 @@ query IndexQuery{
     }
   }
 
+  skills: allMarkdownRemark (
+    filter: { fileAbsolutePath: { regex: "/skills/" } }
+    ) {
+    edges {
+      node {
+        frontmatter {
+          title
+          languages
+          frontEnd
+          backEnd
+          developerTools
+        }
+      }
+    }
+  }
 
 
 }
