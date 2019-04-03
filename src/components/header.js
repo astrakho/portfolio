@@ -29,7 +29,6 @@ const LogoLink = styled(Link)`
   min-width: 42px;
   padding: 0;
   position: relative;
-  width: 42px;
   text-decoration: none;
 `
 const Logo = styled('div')`
@@ -82,7 +81,7 @@ const Header = ({ siteTitle }) => (
     <NavBar>
 
       <LogoLink to="/">
-        <Logo> A </Logo>
+        <Logo> {'<Alex />'}  </Logo>
       </LogoLink>
 
 
