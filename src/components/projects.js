@@ -1,5 +1,4 @@
 
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
@@ -33,15 +32,7 @@ const ProjectsGrid = styled.div`
   ${media.tablet`grid-template-columns: repeat(1, minmax(300px, 1fr));`};
 
 `
-const ProjectsFlex = styled.div`
 
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  align-items: center;
-
-`
 
 class Projects extends React.Component{
 
@@ -52,7 +43,6 @@ class Projects extends React.Component{
   render(){
 
     let projects = []
-    let flag = 0
     
     projects = this.props.data.map( project =>   
         

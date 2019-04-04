@@ -19,6 +19,7 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  
 
 `
 
@@ -63,9 +64,9 @@ const Layout = ({ children }) => (
             <a href="https://reactjs.org/">React</a>
             .
             { ` ` }
-            The source code is avaliable at
+            The source code is avaliable at my
             { ` ` }
-            <a href="https://github.com/astrakho/portfolio">Github</a>.
+            <a href="https://github.com/astrakho/portfolio">Github repository</a>.
           </footer>
 
         </LayoutWrapper>

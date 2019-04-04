@@ -1,13 +1,10 @@
-import { Link } from "gatsby"
-import PropTypes, { node } from "prop-types"
+
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 
 import { FaGithub, FaLink } from "react-icons/fa"
 
-
-import media from "../styles/media"
 
 
 const ProjectWrapper = styled.div`

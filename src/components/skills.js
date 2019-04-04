@@ -1,44 +1,43 @@
 
 import React, { Component } from 'react'
-import Cloud from './cloud'
-import PropTypes from 'prop-types'
+import Skill from './skill'
 import styled from 'styled-components'
+import media from '../styles/media'
 
 
-const SkillsWrapper = styled.div`
 
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-height: 100vh;
+
+const SkillsGrid = styled.div`
+
+  display: grid; /* 1 */
+  grid-template-columns: repeat(3, 300px); /* 2 */
+  grid-gap: 10px; /* 3 */
+  justify-content: center; /* 4 */
+
+  ${media.desktop`grid-template-columns: repeat(2, minmax(300px, 1fr));`};
+
+  ${media.tablet`grid-template-columns: repeat(1, minmax(300px, 1fr));`};
 
 `
 
 const Title = styled.h3`
 
-
 `
 
 class Skills extends Component {
 
-
   render() {
 
-    console.log(this.props.data[0].node.frontmatter)
-
-
     return (
-
-      <SkillsWrapper>
-
+      <div>
         <Title> { this.props.data[0].node.frontmatter.title } </Title>
-        <Cloud title =  "languages" skills = { this.props.data[0].node.frontmatter.languages } />
-        <div> front end: { this.props.data[0].node.frontmatter.frontEnd } </div>
-        <div> back end: { this.props.data[0].node.frontmatter.backEnd } </div>
-        <div> developer tools: { this.props.data[0].node.frontmatter.developerTools } </div>
-
-      </SkillsWrapper>
-
+        <SkillsGrid>
+          <Skill title =  "Languages" skills = { this.props.data[0].node.frontmatter.languages } />
+          <Skill title =  "Front End" skills = { this.props.data[0].node.frontmatter.frontEnd } />
+          <Skill title =  "Back End" skills = { this.props.data[0].node.frontmatter.backEnd } />
+          <Skill title =  "Developer Tools" skills = { this.props.data[0].node.frontmatter.developerTools } />
+        </SkillsGrid>
+      </div>
     )
   }
 }

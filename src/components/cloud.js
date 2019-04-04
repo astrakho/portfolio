@@ -15,6 +15,7 @@ const CloudWrapper = styled.div`
   background: #3498db;
   border-radius: 100px;
   position: relative;
+  text-align: center;
 
 
   &:before,
@@ -50,6 +51,7 @@ const CloudContent = styled.div`
 
   width: 80%;
   text-align: center;
+  display: inline-block;
 
 `
 
