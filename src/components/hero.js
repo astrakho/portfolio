@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const AboutContainer = styled.div`
+import { FaGithub, FaStackOverflow } from "react-icons/fa"
+
+const HeroContainer = styled.div`
+
   display: flex;
-  max-width: 550px;
   justify-content: center;
-  align-items: start;
+  flex-direction: column;
+  align-items: center;
+  max-width: 700px;
   min-height: 70vh;
-`;
+
+`
 
 const ContentContainer = styled.div`
-  width: 80%;
-  max-width: 550px;
-`;
+  width: 90%;
+  max-width: 700px;
+`
 
 const Greeting = styled.h2`
 
@@ -23,13 +28,13 @@ const Greeting = styled.h2`
 
 `
 
-class About extends Component {
+class Hero extends Component {
 
   render() {
 
     return (
 
-      <AboutContainer>
+      <HeroContainer>
 
         <ContentContainer>
 
@@ -39,10 +44,18 @@ class About extends Component {
 
         </ContentContainer>
 
-      </AboutContainer>
+        <div style = {{ display: "inline-block" }} >
+
+          <FaGithub size = "2em" />
+
+          <FaStackOverflow size = "2em" />
+
+        </div>
+
+      </HeroContainer>
 
     );
   }
 }
 
-export default About;
+export default Hero;

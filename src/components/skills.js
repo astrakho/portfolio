@@ -7,6 +7,17 @@ import media from '../styles/media'
 
 
 
+
+
+const SkillsWrapper = styled.div`
+
+  width: 100%;
+  padding: 2em;
+  margin: 1em;
+  background: #efeeff;
+
+`
+
 const SkillsGrid = styled.div`
 
   display: grid; /* 1 */
@@ -22,14 +33,19 @@ const SkillsGrid = styled.div`
 
 const Title = styled.h3`
 
+  display: block;
+  text-align: center
+
 `
+
 
 class Skills extends Component {
 
   render() {
 
     return (
-      <div>
+
+      <SkillsWrapper id = "about">
         <Title> { this.props.data[0].node.frontmatter.title } </Title>
         <SkillsGrid>
           <Skill title =  "Languages" skills = { this.props.data[0].node.frontmatter.languages } />
@@ -37,7 +53,8 @@ class Skills extends Component {
           <Skill title =  "Back End" skills = { this.props.data[0].node.frontmatter.backEnd } />
           <Skill title =  "Developer Tools" skills = { this.props.data[0].node.frontmatter.developerTools } />
         </SkillsGrid>
-      </div>
+      </SkillsWrapper>
+
     )
   }
 }

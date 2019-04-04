@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import styled from "styled-components"
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import media from '../styles/media'
 
@@ -45,7 +46,7 @@ align-items: center;
 
 `
 
-const NavLink = styled(Link)`
+const AnchorLinkStyled = styled(AnchorLink)`
   border: 2px solid transparent;
   border-radius: 0;
   font-weight: 900;
@@ -58,15 +59,15 @@ const NavLink = styled(Link)`
 
 const sections = [
   {
-    href: '/about/',
+    href: '#about',
     label: 'About',
   },
   {
-    href: '/projects/',
+    href: '#projects',
     label: 'Projects',
   },
   {
-    href: '/contact/',
+    href: '#contact',
     label: 'Contact'
   }
 ];
@@ -88,13 +89,12 @@ const Header = ({ siteTitle }) => (
       <NavLinkContainer>
 
         {sections.map(({ href, label }) => (
-          <NavLink
-            key={label}
-            to={href}
-            activeClassName="active"
+          <AnchorLinkStyled
+            key = { label }
+            href = { href }
           >
             {label}
-          </NavLink>
+          </AnchorLinkStyled>
         ))}
 
       </NavLinkContainer>

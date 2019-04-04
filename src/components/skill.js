@@ -10,6 +10,7 @@ const SkillWrapper = styled.div`
   transition: 0.3s;
   padding: 1em;
   width: 100%;
+  background: white;
 
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -25,7 +26,15 @@ const SkillContent = styled.div`
 
   display: inline-block;
 
-  margin-right: .3em
+
+  padding: 5px;
+  border: 1px solid gray;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 10px;
+  &:hover::after {
+    opacity: 1;
+  }
 
 `
 
@@ -38,7 +47,7 @@ class Skill extends Component {
         <SkillTitle> 
           { this.props.title }   
         </SkillTitle>
-        { this.props.skills.map(skill => <SkillContent> { skill } </SkillContent>) }
+        { this.props.skills.map(skill => <SkillContent key = { skill }> { skill } </SkillContent>) }
       </SkillWrapper>
     )
   }

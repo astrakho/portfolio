@@ -13,7 +13,6 @@ const LayoutWrapper = styled.div`
 
   margin: 0 auto;
   maxWidth: 960;
-  padding: 5em 1.0875rem 1em;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -27,7 +26,7 @@ const Main = styled.main`
 
   margin: 0 auto;
   width: 100%;
-  padding: 5em 1.0875rem 1em;
+  padding-top: 5em;
   display: flex;
   min-height: 100vh;
   flex-direction: column;

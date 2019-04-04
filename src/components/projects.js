@@ -16,7 +16,7 @@ width: 100;
 min-height: 100vh;
 flex-direction: column;
 justify-content: flex-start;
-align-items: center;
+align-items: start;
   
 `
 
@@ -52,9 +52,9 @@ class Projects extends React.Component{
     
     return(
       
-      <ProjectsWrapper>
+      <ProjectsWrapper id = "projects">
 
-        <div> Projects </div>
+        <h3> Projects </h3>
 
         
         <ProjectsGrid>
