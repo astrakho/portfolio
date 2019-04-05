@@ -6,9 +6,9 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import media from '../styles/media'
 
 const HeaderContainer = styled.header`
-  background: #ECECEC;
+  background: white;
   padding: 0px 90px;
-  
+  border-bottom: 1px solid #bac5d6;
   ${media.desktop`padding: 0 40px;`};
   ${media.tablet`padding: 0 25px;`};
 ` 
@@ -33,16 +33,14 @@ const Logo = styled('div')`
 `
 
 const NavLinkContainer = styled.div`
-
 display: flex;
 align-items: center;
-
 `
 
 const AnchorLinkStyled = styled(AnchorLink)`
   border: 2px solid transparent;
   border-radius: 0;
-  font-weight: 900;
+  font-weight: 500;
   line-height: 1.25;
   margin-right: 1em;
   padding: 0;
@@ -66,7 +64,6 @@ const sections = [
 ];
 
 const Header = ({ siteTitle }) => (
-
   <HeaderContainer>
     <NavBar>
       <LogoLink to="/">

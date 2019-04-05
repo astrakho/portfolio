@@ -36,6 +36,7 @@ class Skills extends Component {
           <Skill title =  "Front End" skills = { this.props.data[0].node.frontmatter.frontEnd } />
           <Skill title =  "Back End" skills = { this.props.data[0].node.frontmatter.backEnd } />
           <Skill title =  "Developer Tools" skills = { this.props.data[0].node.frontmatter.developerTools } />
+          <Skill title = "Query Languages" skills = { this.props.data[0].node.frontmatter.queryLanguages } />
         </SkillsGrid>
       </SkillsWrapper>
     )

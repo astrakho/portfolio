@@ -19,6 +19,7 @@ const Main = styled.main`
   margin: 0 auto;
   width: 100%;
   padding-top: 5em;
+  border-bottom: 1px solid #bac5d6;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
@@ -44,7 +45,7 @@ const Layout = ({ children }) => (
         <LayoutWrapper>
 
           <Main> {children} </Main>
-          <footer style = {{ textAlign: 'center', marginBottom: '1.45em' }}>
+          <footer style = {{ textAlign: 'center', marginBottom: '1em', marginTop: "1em" }}>
             © Built with
             { ` ` }
             <a href="https://www.gatsbyjs.org">Gatsby</a>

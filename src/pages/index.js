@@ -79,6 +79,7 @@ query IndexQuery{
           frontEnd
           backEnd
           developerTools
+          queryLanguages
         }
       }
     }

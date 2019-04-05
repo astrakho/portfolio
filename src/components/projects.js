@@ -12,7 +12,7 @@ const ProjectsWrapper = styled.div`
   min-height: 100vh;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: start;
+  align-items: center;
 `
 
 const ProjectsGrid = styled.div`
