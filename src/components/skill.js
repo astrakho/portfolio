@@ -5,7 +5,6 @@ import styled from 'styled-components'
 
 
 const SkillWrapper = styled.div`
-
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   padding: 1em;
@@ -15,7 +14,6 @@ const SkillWrapper = styled.div`
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
-
 `
 
 const SkillTitle = styled.h3`
@@ -23,10 +21,7 @@ const SkillTitle = styled.h3`
 `
 
 const SkillContent = styled.div`
-
   display: inline-block;
-
-
   padding: 5px;
   border: 1px solid gray;
   margin-right: 5px;
@@ -35,13 +30,10 @@ const SkillContent = styled.div`
   &:hover::after {
     opacity: 1;
   }
-
 `
 
 class Skill extends Component {
-
   render() {
-
     return (
       <SkillWrapper>
         <SkillTitle> 

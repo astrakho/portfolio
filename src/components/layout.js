@@ -1,16 +1,11 @@
-
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-
 import Header from "./header"
 import "./layout.css"
 
-
-
 const LayoutWrapper = styled.div`
-
   margin: 0 auto;
   maxWidth: 960;
   display: flex;
@@ -18,12 +13,9 @@ const LayoutWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  
-
 `
 
 const Main = styled.main`
-
   margin: 0 auto;
   width: 100%;
   padding-top: 5em;
@@ -32,9 +24,7 @@ const Main = styled.main`
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-
 `
-
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -47,14 +37,13 @@ const Layout = ({ children }) => (
         }
       }
     `}
+
     render={data => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
-
         <LayoutWrapper>
 
           <Main> {children} </Main>
-          
           <footer style = {{ textAlign: 'center', marginBottom: '1.45em' }}>
             © Built with
             { ` ` }
@@ -68,8 +57,7 @@ const Layout = ({ children }) => (
             <a href="https://github.com/astrakho/portfolio">Github repository</a>.
           </footer>
 
-        </LayoutWrapper>
-        
+        </LayoutWrapper>        
       </>
     )}
   />
