@@ -14,6 +14,17 @@ const ProjectWrapper = styled.div`
   }
 `
 
+const TitleAndLink = styled.div`
+  margin-top: 1em
+`
+
+const Links = styled.div`
+
+  display: inline-block;
+  float: right;
+
+`
+
 const TechWrapper = styled.div`
   width: 100%;
   display: flex;
@@ -32,11 +43,12 @@ const Tech = styled.div`
 
 const IconLink = styled.a`
   padding: 0px;
+  margin-left: .5em;
   svg {
-    width: 20px;
-    height: 20px;
+    width: 1.5em;
+    height: 1.5em;
   }
-`;
+`
 
 class Project extends React.Component{
   render(){
@@ -47,18 +59,20 @@ class Project extends React.Component{
     return(
       <ProjectWrapper>  
         <Img fluid = { this.props.frontmatter.img.childImageSharp.fluid } />
-        <h3> { this.props.frontmatter.title } </h3>
-
-        <IconLink href = { this.props.frontmatter.github } >
-          <FaGithub />
-        </IconLink>
-
-        <IconLink href = { this.props.frontmatter.link }>
-          <FaLink />
-        </IconLink>
-
+        <TitleAndLink>
+          <h3 style = {{ display: "inline-block" }} > { this.props.frontmatter.title } </h3>
+          <Links>
+            <IconLink href = { this.props.frontmatter.github } >
+              <FaGithub size = "1.5em" />
+            </IconLink>
+            { this.props.frontmatter.link !== "" &&
+              <IconLink href = { this.props.frontmatter.link }>
+                <FaLink size = "1.5em" />
+              </IconLink>
+            }
+          </Links>
+        </TitleAndLink>
         <h5> { this.props.frontmatter.description } </h5>
-        <h5> Technologies: </h5>
         <TechWrapper>
           { techUsed }
         </TechWrapper>

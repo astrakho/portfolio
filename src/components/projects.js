@@ -6,10 +6,9 @@ import media from "../styles/media"
 
 const ProjectsWrapper = styled.div`
   margin: 0 auto;
-  padding: 5em 1.0875rem 1em;
+  padding: 2em 0px 4em 0px;
   display: flex;
-  width: 100;
-  min-height: 100vh;
+  width: 100%;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -20,6 +19,7 @@ const ProjectsGrid = styled.div`
   grid-template-columns: repeat(3, 300px); /* 2 */
   grid-gap: 10px; /* 3 */
   justify-content: center; /* 4 */
+  margin-top: 2em;
 
   ${media.desktop`grid-template-columns: repeat(2, minmax(300px, 1fr));`};
   ${media.tablet`grid-template-columns: repeat(1, minmax(300px, 1fr));`};
@@ -39,7 +39,7 @@ class Projects extends React.Component{
     
     return(
       <ProjectsWrapper id = "projects">
-        <h3> Projects </h3>
+        <h3 style = {{ marginBottom: "0px" }} > Projects </h3>
         <ProjectsGrid>
           { projects }
         </ProjectsGrid>

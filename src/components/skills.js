@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import Skill from './skill'
 import styled from 'styled-components'
@@ -6,16 +5,17 @@ import media from '../styles/media'
 
 const SkillsWrapper = styled.div`
   width: 100%;
-  padding: 2em;
-  margin: 1em;
+  padding: 2em 0px 4em 0px;
   background: #efeeff;
 `
 
 const SkillsGrid = styled.div`
+
   display: grid; /* 1 */
   grid-template-columns: repeat(3, 300px); /* 2 */
   grid-gap: 10px; /* 3 */
   justify-content: center; /* 4 */
+  margin-top: 2em;
 
   ${media.desktop`grid-template-columns: repeat(2, minmax(300px, 1fr));`};
   ${media.tablet`grid-template-columns: repeat(1, minmax(300px, 1fr));`};

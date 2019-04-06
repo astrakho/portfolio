@@ -1,8 +1,5 @@
-
 import React, { Component } from 'react'
 import styled from 'styled-components'
-
-
 
 const SkillWrapper = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -19,7 +16,6 @@ const SkillWrapper = styled.div`
 const SkillTitle = styled.h3`
 
 `
-
 const SkillContent = styled.div`
   display: inline-block;
   padding: 5px;

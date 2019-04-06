@@ -1,13 +1,6 @@
-
 import React, { Component } from 'react';
 import PropTypes from "prop-types"
 import styled from 'styled-components';
-
-
-
-
-
-
 
 const CloudWrapper = styled.div`
 
@@ -47,34 +40,20 @@ const CloudWrapper = styled.div`
 `
 
 const CloudContent = styled.div`
-
-
   width: 80%;
   text-align: center;
   display: inline-block;
-
 `
-
-
-
 class Cloud extends Component {
-
-
   render() {
 
     return (
-      
       <CloudWrapper>
-
         <CloudContent>
-
         { this.props.title }
         { this.props.skills }
-
         </CloudContent>
-
       </CloudWrapper>
-
     )
   }
 }

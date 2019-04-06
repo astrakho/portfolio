@@ -17,11 +17,10 @@ const LayoutWrapper = styled.div`
 
 const Main = styled.main`
   margin: 0 auto;
-  width: 100%;
   padding-top: 5em;
+  width: 100%;
   border-bottom: 1px solid #bac5d6;
   display: flex;
-  min-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
