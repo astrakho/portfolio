@@ -19,6 +19,7 @@ const ProjectsGrid = styled.div`
   grid-template-columns: repeat(3, 300px); /* 2 */
   grid-gap: 10px; /* 3 */
   justify-content: center; /* 4 */
+  padding: 0 1em 0 1em;
   margin-top: 2em;
 
   ${media.desktop`grid-template-columns: repeat(2, minmax(300px, 1fr));`};

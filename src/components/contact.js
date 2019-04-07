@@ -5,17 +5,18 @@ const ContactContainer = styled.div`
   display: flex;
   width: 100%;
   padding-top: 2em;
-  min-height: 50vh;
   background: #efeeff;
-  padding-bottom: 2em;
+  padding-bottom: 4em;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 `
 
 const ContactContent = styled.div`
-  max-width: 700px;
-  text-align: center;
+  max-width: 930px;
+  padding: 0em 1em 0em 1em;
+  text-align: start;
+  font: 112.5%/1.45em georgia, serif;
 `
 
 class Contact extends Component {

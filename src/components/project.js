@@ -36,7 +36,7 @@ const Tech = styled.div`
   border: 1px solid gray;
   margin: 2px;
   border-radius: 10px;
-  &:hover::after {
+  &:hover::after{
     opacity: 1;
   }
 `
@@ -44,7 +44,8 @@ const Tech = styled.div`
 const IconLink = styled.a`
   padding: 0px;
   margin-left: .5em;
-  svg {
+  color: black;
+  svg{
     width: 1.5em;
     height: 1.5em;
   }

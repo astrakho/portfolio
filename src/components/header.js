@@ -6,16 +6,20 @@ import AnchorLink from 'react-anchor-link-smooth-scroll'
 import media from '../styles/media'
 
 const HeaderContainer = styled.header`
+
+  display: flex;
+  justify-content: center;
   background: white;
-  padding: 0px 90px;
   border-bottom: 1px solid #bac5d6;
-  ${media.desktop`padding: 0 40px;`};
-  ${media.tablet`padding: 0 25px;`};
+
 ` 
 
 const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
+  width: 90%;
+  max-width: 1280px;
+
 `
 
 const LogoLink = styled(Link)`
@@ -43,9 +47,16 @@ const AnchorLinkStyled = styled(AnchorLink)`
   font-weight: 500;
   line-height: 1.25;
   margin-right: 1em;
-  padding: 0;
+  padding: .5em;
   text-decoration: none;
   transition-property: color;
+
+  &:hover {
+    background-color: #efeeff;
+  }
+
+  ${media.phone`margin-right: 0em;`};
+  
 `
 
 const sections = [
