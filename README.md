@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="https://www.alexanderstrakhov.com">
     alexanderstrakhov.com
   </a>
 </p>
