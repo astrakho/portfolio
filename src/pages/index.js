@@ -1,29 +1,19 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import Hero from "../components/hero"
 import Projects from "../components/projects"
 import Skills from "../components/skills"
 import Contact from "../components/contact"
 
 
-
-
 const IndexPage = ( { data } ) => (
-
   <Layout>
-
-    <SEO title="Home" keywords={[`alexander strakhov`, `software`, `engineer`, `developer`, `portfolio`]} />
-    
+    <SEO title="Portfolio" keywords={[`alexander strakhov`, `software`, `engineer`, `developer`, `portfolio`]} />
     <Hero />
-
     <Skills data = { data.skills.edges } />
-
     <Projects data = { data.projects.edges }/>
-
     <Contact />
-
   </Layout>
 )
 

@@ -4,6 +4,7 @@ import React from "react"
 import styled from "styled-components"
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import media from '../styles/media'
+import Logo from '../content/icons/logo'
 
 const HeaderContainer = styled.header`
 
@@ -23,17 +24,13 @@ const NavBar = styled.nav`
 `
 
 const LogoLink = styled(Link)`
-  border: 0;
-  margin-right: 0.5rem;
-  min-width: 42px;
-  padding: 0;
-  position: relative;
-  text-decoration: none;
-`
-
-const Logo = styled('div')`
-  padding: .5em;
-  margin: auto;
+  padding: 10px;
+  margin-left: .5em;
+  color: black;
+  svg{
+    width: 50px;
+    height: 50px;
+  }
 `
 
 const NavLinkContainer = styled.div`
@@ -78,7 +75,7 @@ const Header = ({ siteTitle }) => (
   <HeaderContainer>
     <NavBar>
       <LogoLink to="/">
-        <Logo style = {{ color: "black" }} > {'<Alex />'}  </Logo>
+        <Logo />
       </LogoLink>
       <NavLinkContainer>
         {sections.map(({ href, label }) => (

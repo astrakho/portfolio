@@ -9,6 +9,12 @@ const ProjectWrapper = styled.div`
   padding: 1em;
   background: white;
 
+
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+
+
   &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
   }
@@ -27,6 +33,7 @@ const Links = styled.div`
 
 const TechWrapper = styled.div`
   width: 100%;
+  margin-top: auto;
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;

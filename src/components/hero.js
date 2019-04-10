@@ -24,16 +24,6 @@ const Greeting = styled.h2`
   line-height: 1.1;
 `
 
-const ResumeButton = styled.a`
-  appearance: button;
-  text-decoration: none;
-  color: initial;
-  padding: 12px 20px;
-  border-radius: 50px;
-  color: blue;
-  background-color: white;
-`
-
 const IconLink = styled.a`
   padding: 0px;
   margin-right: 25px;

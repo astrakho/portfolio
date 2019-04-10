@@ -13,7 +13,7 @@ const ContactContainer = styled.div`
 `
 
 const ContactContent = styled.div`
-  max-width: 930px;
+  max-width: 900px;
   padding: 0em 1em 0em 1em;
   text-align: start;
   font: 112.5%/1.45em georgia, serif;
